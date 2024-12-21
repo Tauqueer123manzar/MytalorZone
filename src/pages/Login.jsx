@@ -15,9 +15,9 @@ const Login = () => {
     <>
       <div className="flex flex-col md:flex-row h-screen bg-gray-100">
         {/* Image Section */}
-        <div className="hidden md:block md:w-1/2 bg-blue-500">
+        <div className="w-full md:w-1/2">
           <div
-            className="h-full bg-cover bg-center"
+            className="h-48 md:h-full bg-cover bg-center"
             style={{
               backgroundImage: `url('https://peaseandcurren.com/wp-content/uploads/2020/03/Retail-and-online-shopping.jpg')`,
             }}
