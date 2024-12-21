@@ -1,13 +1,16 @@
 import React, { useState } from "react";
-
+import { CiShoppingCart } from "react-icons/ci";
+import {Link} from 'react-router-dom'
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="bg-gray-100 py-4 shadow-md">
       <div className="container mx-auto flex items-center justify-between px-4">
+        {/* Logo */}
         <div className="text-3xl font-bold text-orange-500">MytalorZone</div>
 
+        {/* Hamburger Menu Button */}
         <button
           className="md:hidden text-gray-600 focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -30,37 +33,58 @@ const Header = () => {
 
         {/* Navigation Menu */}
         <nav
-          className={`${
-            isMenuOpen ? "inline" : "hidden"
-          } absolute flex flex-col top-14 left-0 w-full bg-gray-100 md:static md:flex md:w-auto md:bg-transparent  md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 mt-4 md:mt-0 px-4 md:px-0 shadow-md md:shadow-none`}
+          className={`${isMenuOpen ? "block" : "hidden"
+            } md:flex absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-gray-100 md:bg-transparent shadow-md md:shadow-none z-50 md:z-auto`}
         >
-          <a href="/" className="text-md md:text-lg text-gray-600 hover:text-gray-900">
-            HOME
-          </a>
-          <a href="/about" className="text-md md:text-lg text-gray-600 hover:text-gray-900">
-            ABOUT
-          </a>
-          <a
-            href="/services"
-            className="text-md md:text-lg text-gray-600 hover:text-gray-900"
-          >
-            SERVICES
-          </a>
-          <a href="/blog" className="text-md md:text-lg text-gray-600 hover:text-gray-900">
-            BLOG
-          </a>
-          <a
-            href="/contact"
-            className="text-md md:text-lg text-gray-600 hover:text-gray-900"
-          >
-            CONTACT
-          </a>
+          <ul className="flex flex-col md:flex-row items-center md:space-x-6 space-y-4 md:space-y-0 p-4 md:p-0">
+            <li>
+              <a href="/" className="text-md md:text-lg text-gray-600 hover:text-gray-900">
+                HOME
+              </a>
+            </li>
+            <li>
+              <a href="/about" className="text-md md:text-lg text-gray-600 hover:text-gray-900">
+                ABOUT
+              </a>
+            </li>
+            <li>
+              <a
+                href="/services"
+                className="text-md md:text-lg text-gray-600 hover:text-gray-900"
+              >
+                SERVICES
+              </a>
+            </li>
+            <li>
+              <a
+                href="/blog"
+                className="text-md md:text-lg text-gray-600 hover:text-gray-900"
+              >
+                BLOG
+              </a>
+            </li>
+            <li>
+              <a
+                href="/contact"
+                className="text-md md:text-lg text-gray-600 hover:text-gray-900"
+              >
+                CONTACT
+              </a>
+            </li>
+          </ul>
         </nav>
 
         {/* Login Button */}
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center">
+          <p
+            style={{ fontSize: "25px" }}
+            className="p-2"
+            href="/cart"
+          >
+            <CiShoppingCart />
+          </p>
           <button className="text-md md:text-lg text-gray-600 hover:text-gray-900">
-            LOGIN
+            <Link to="/login">LOGIN</Link>
           </button>
         </div>
       </div>

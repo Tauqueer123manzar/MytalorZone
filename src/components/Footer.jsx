@@ -7,9 +7,9 @@ const Footer = () => {
     return (
         <>
             <div className="w-full h-full bg-gray-950">
-            <h1 className='text-2xl text-yellow-500 text-center'>Subscribe to experience the promise of quality.</h1>
+            {/* <h1 className='text-2xl text-yellow-500 text-center'>Subscribe to experience the promise of quality.</h1>
             <h1 className='text-2xl text-pink-500 text-center font-[poppins]'>Explore this section for special deals, unique giveaways, and one-of-a-kind
-            offers.</h1>
+            offers.</h1> */}
                 <h1 className="m-2 text-4xl font-bold font-initial text-orange-500">MytalorZone</h1>
                 <div className="p-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     {/* About Foody */}
