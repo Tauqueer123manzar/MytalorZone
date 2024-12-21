@@ -34,32 +34,32 @@ const Header = () => {
             isMenuOpen ? "inline" : "hidden"
           } absolute flex flex-col top-14 left-0 w-full bg-gray-100 md:static md:flex md:w-auto md:bg-transparent  md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 mt-4 md:mt-0 px-4 md:px-0 shadow-md md:shadow-none`}
         >
-          <a href="/" className="text-lg text-gray-600 hover:text-gray-900">
+          <a href="/" className="text-md md:text-lg text-gray-600 hover:text-gray-900">
             HOME
           </a>
-          <a href="/about" className="text-lg text-gray-600 hover:text-gray-900">
+          <a href="/about" className="text-md md:text-lg text-gray-600 hover:text-gray-900">
             ABOUT
           </a>
           <a
             href="/services"
-            className="text-lg text-gray-600 hover:text-gray-900"
+            className="text-md md:text-lg text-gray-600 hover:text-gray-900"
           >
             SERVICES
           </a>
+          <a href="/blog" className="text-md md:text-lg text-gray-600 hover:text-gray-900">
+            BLOG
+          </a>
           <a
             href="/contact"
-            className="text-lg text-gray-600 hover:text-gray-900"
+            className="text-md md:text-lg text-gray-600 hover:text-gray-900"
           >
             CONTACT
-          </a>
-          <a href="/blog" className="text-lg text-gray-600 hover:text-gray-900">
-            BLOG
           </a>
         </nav>
 
         {/* Login Button */}
         <div className="hidden md:block">
-          <button className="text-lg text-gray-600 hover:text-gray-900">
+          <button className="text-md md:text-lg text-gray-600 hover:text-gray-900">
             LOGIN
           </button>
         </div>
