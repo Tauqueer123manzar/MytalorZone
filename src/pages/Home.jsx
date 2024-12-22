@@ -125,7 +125,7 @@ const Home = () => {
               <img
                 src={product.image}
                 alt={product.title}
-                className="w-full h-[250px] sm:h-[250px] md:h-[300px] object-cover group-hover:opacity-90 transition-opacity duration-500"
+                className="w-full h-[250px] sm:h-[250px] md:h-[300px] object-cover group-hover:opacity-90 transition-opacity duration-500 img-1"
                 style={{ width: "100%", height: "70%", objectFit: "cover" }}
               />
               <div className="absolute top-2 right-2 bg-black text-white text-sm px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -165,7 +165,7 @@ const Home = () => {
               <img
                 src={product.image}
                 alt={product.title}
-                className="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover group-hover:opacity-90 transition-opacity duration-500"
+                className="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover group-hover:opacity-90 transition-opacity duration-500 img-1"
                 style={{ width: "100%", height: "auto", objectFit: "cover" }}
               />
               <div className="absolute top-2 right-2 bg-black text-white text-sm px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
