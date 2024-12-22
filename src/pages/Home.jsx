@@ -72,7 +72,7 @@ const products2 = [
   },
   {
     id: 4,
-    image: "https://assets.myntassets.com/h_200,w_200,c_fill,g_auto/h_1440,q_100,w_1080/v1/assets/images/productimage/2020/3/15/3b21781e-fb5f-4682-bc23-93b0954009621584224713562-1.jpg",
+    image: "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/1823142/2017/4/27/11493281526215-WROGN-Men-Navy-Blue-Slim-Fit-Checked-Casual-Shirt-5201493281525914-1.jpg",
     title: " Stylish yet comfortable, great for outings, dinners, or casual Fridays.",
     price: 999,
     reviews: 31,
@@ -165,8 +165,8 @@ const Home = () => {
               <img
                 src={product.image}
                 alt={product.title}
-                className="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover group-hover:opacity-90 transition-opacity duration-500 img-1"
-                style={{ width: "100%", height: "auto", objectFit: "cover" }}
+                className="w-full h-[250px] sm:h-[250px] md:h-[300px] object-cover group-hover:opacity-90 transition-opacity duration-500 img-1"
+                style={{ width: "100%", height: "70%", objectFit: "cover" }}
               />
               <div className="absolute top-2 right-2 bg-black text-white text-sm px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 Quick View
