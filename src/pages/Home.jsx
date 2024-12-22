@@ -29,7 +29,7 @@ const products = [
   },
   {
     id: 4,
-    image: "https://assets.myntassets.com/h_200,w_200,c_fill,g_auto/h_1440,q_100,w_1080/v1/assets/images/2024/OCTOBER/21/EA9ugsGS_adbb9da530414ff99347350deac5b6de.jpg",
+    image: "https://i.pinimg.com/originals/31/3f/50/313f50e0a66f9be434d7caf0563b60c4.jpg",
     title: "Electric Purple Zari Work Kanjeevaram Silk Saree",
     price: 1999,
     reviews: 31,
@@ -37,9 +37,9 @@ const products = [
   },
   {
     id: 5,
-    image: "https://i.pinimg.com/736x/ee/7d/cf/ee7dcfa3705d176360537af0b588b043.jpg",
+    image: "https://assets.myntassets.com/h_200,w_200,c_fill,g_auto/h_1440,q_100,w_1080/v1/assets/images/2024/OCTOBER/21/EA9ugsGS_adbb9da530414ff99347350deac5b6de.jpg",
     title: "Electric Purple Zari Work Kanjeevaram Silk Saree",
-    price: 3499,
+    price: 1999,
     reviews: 31,
     rating: 4.5,
   },
@@ -77,7 +77,8 @@ const Home = () => {
               <img
                 src={product.image}
                 alt={product.title}
-                className="w-60 h-80 object-cover group-hover:opacity-90 transition-opacity duration-500"
+                className="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover group-hover:opacity-90 transition-opacity duration-500"
+                style={{ objectFit: "cover", height: "350px" }}
               />
               <div className="absolute top-2 right-2 bg-black text-white text-sm px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 Quick View
@@ -105,7 +106,7 @@ const Home = () => {
 
       {/* Footer Section */}
       <div className="mt-5">
-      <Footer />
+        <Footer />
       </div>
     </>
   );
