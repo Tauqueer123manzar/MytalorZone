@@ -1,8 +1,7 @@
 import { useState } from "react";
-import services from "../../ServiceData";
 import ServiceCard from "../components/ServiceCard";
 import Footer from "../components/Footer";
-
+import services from "../ServiceData";
 const Services = () => {
   const [category, setCategory] = useState("All");
   const [maxPrice, setMaxPrice] = useState(1000);
