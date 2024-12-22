@@ -11,3 +11,13 @@ img-1 {
     }
   }
   
+  .product-card {
+    height: auto;
+  }
+  
+  @media (min-width: 1024px) {
+    .product-card {
+      height: 800px;
+    }
+  }
+  

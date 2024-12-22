@@ -24,7 +24,7 @@ const Services = () => {
 
         <div className="py-8 px-6 md:px-20 bg-white">
           <h2 className="text-2xl font-bold mb-6">Filter Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
             <div>
               <label className="block font-semibold mb-2">Category</label>
               <select

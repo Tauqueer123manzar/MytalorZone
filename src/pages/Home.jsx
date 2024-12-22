@@ -103,7 +103,7 @@ const Home = () => {
           </p>
          <div className="flex justify-center gap-4">
          <button className="mt-8 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-lg transition-all">
-            Start Shopping
+          <a href="/sevices">Start Shopping</a>
           </button>
           
           <button className="mt-8 px-6 py-3 gap-2 bg-orange-500 hover:bg-orange-600 text-white text-lg font-semibold rounded-lg shadow-lg transition-all"
@@ -120,7 +120,7 @@ const Home = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              className="group relative overflow-hidden rounded-lg shadow-md bg-white hover:scale-105 hover:shadow-lg transition-transform duration-300"
+              className="group relative product-card overflow-hidden rounded-lg shadow-md bg-white hover:scale-105 hover:shadow-lg transition-transform duration-300"
             >
               <img
                 src={product.image}
@@ -160,7 +160,7 @@ const Home = () => {
           {products2.map((product) => (
             <div
               key={product.id}
-              className="group relative overflow-hidden rounded-lg shadow-md bg-white hover:scale-105 hover:shadow-lg transition-transform duration-300"
+              className="group relative product-card overflow-hidden rounded-lg shadow-md bg-white hover:scale-105 hover:shadow-lg transition-transform duration-300"
             >
               <img
                 src={product.image}
