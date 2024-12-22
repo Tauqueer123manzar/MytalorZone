@@ -46,7 +46,7 @@ const Blog = () => {
             />
             <div className="p-6">
               <h3 className="text-2xl font-semibold text-gray-800 mb-2">
-                Modern Tailoring: Merging Tradition with Innovation
+                Modern Tailoring: Merging Tradition with Innovation in Fashion Design
               </h3>
               <p className="text-sm text-gray-500 mb-4">Nov 15, 2024</p>
               <p className="text-gray-700 mb-6">
