@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import services from "../../ServiceData";
 import ServiceCard from "../components/ServiceCard";
 import Footer from "../components/Footer";
