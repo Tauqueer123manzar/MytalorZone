@@ -14,7 +14,6 @@ const Login = () => {
   return (
     <>
       <div className="flex flex-col md:flex-row h-screen bg-gray-100">
-        {/* Image Section */}
         <div className="w-full md:w-1/2">
           <div
             className="h-48 md:h-full bg-cover bg-center"
@@ -24,8 +23,7 @@ const Login = () => {
           ></div>
         </div>
 
-        {/* Login Form Section */}
-        <div className="flex items-center justify-center w-full md:w-1/2 p-6 bg-white">
+        <div className="flex items-center justify-center w-full h-full md:w-1/2 p-6 bg-white">
           <div className="w-full max-w-md">
             <h2 className="text-3xl font-bold text-center text-gray-800">Welcome Back</h2>
             <p className="text-center text-gray-600">Please login to your account</p>
