@@ -7,7 +7,7 @@ const Footer = ({products}) => {
     return (
         <>
             <div className="w-full h-full bg-gray-950">
-                <h1 className=" text-4xl font-bold font-initial text-orange-500">MytalorZone</h1>
+                <h1 className=" text-4xl font-bold font-initial text-orange-500 p-3">MytalorZone</h1>
                 <div className="p-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     {/* About Foody */}
                     <div className="p-5">

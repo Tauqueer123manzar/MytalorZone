@@ -191,7 +191,6 @@ const Home = () => {
           ))}
         </div>
       </div>
-      {/* Footer Section */}
       <div className="mt-5">
         <Footer />
       </div>

@@ -7,7 +7,7 @@ const Signup = () => {
       <div className="flex flex-col md:flex-row min-h-screen bg-gray-100">
         {/* Left Section */}
         <div className="flex flex-col justify-center items-center bg-blue-500 text-white w-full md:w-1/2 p-8">
-          <h1 className="text-4xl font-bold mb-4">CREATE AN ACCOUNT</h1>
+          <h1 className="text-4xl font-bold text-center mb-4">CREATE AN ACCOUNT</h1>
           <p className="text-center text-lg">
             Join us and unlock endless possibilities! Create your account in just a few steps and get started today.
           </p>
