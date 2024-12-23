@@ -98,7 +98,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative text-center text-white">
           <h1 className="text-5xl font-bold drop-shadow-lg">
-            <span className="typewriter">Welcome to MytailorZone</span>
+            <span>Welcome to MytailorZone</span>
           </h1>
 
           <p className="text-lg mt-4 max-w-xl mx-auto drop-shadow-md">
