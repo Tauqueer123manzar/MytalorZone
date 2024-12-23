@@ -14,21 +14,15 @@ const Login = () => {
     try {
       const res = await axios.post(
         `${import.meta.env.VITE_API_URL}/api/v1/user/login`,
-        { email, password, role: 'User' },
-        {
-          withCredentials: true,
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }
+        { email, password, role: 'User' }
       );
       console.log(res.data.message);
       toast.success(res.data.message);
       setEmail('');
       setPassword('');
       navigate('/');
-      localStorage.setItem('token',res.data.token);
-      localStorage.setItem('role',res.data.role);
+      localStorage.setItem('token', res.data.token);
+      localStorage.setItem('role', res.data.role);
     } catch (error) {
       toast.error(error.response?.data?.message || 'Something went wrong!');
     }

@@ -34,7 +34,7 @@ exports.UserRegister = catchAsyncErrors(async (req, res, next) => {
 // ================================================ User Login ========================================================
 exports.UserLogin = catchAsyncErrors(async (req, res, next) => {
     const { email, password, role } = req.body;
-
+    console.log("email:",email,password,role)
     if (!email || !password || !role) {
         return next(new Errorhandler("All fields are required", 400));
     }
