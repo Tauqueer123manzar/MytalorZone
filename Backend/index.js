@@ -15,7 +15,8 @@ const PORT = process.env.PORT || 5000;
 
 app.use(
     cors({
-        origin: ['https://mytalor-zone-lar6.vercel.app/','http://localhost:5173/'],
+        // origin: ['https://mytalor-zone-lar6.vercel.app/','http://localhost:5173/'],
+        origin: '*',
         methods: ["GET", "POST", "DELETE", "PUT"],
         credentials: true,
     })
