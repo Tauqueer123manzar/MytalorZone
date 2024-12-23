@@ -1,25 +1,49 @@
 import Footer from "../components/Footer";
-import React, { useState } from "react";
-
+import { useState } from "react";
+import { toast } from 'react-toastify';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
+    message: ""
   });
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("http://localhost:5000/api/v1/message/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        toast.success(data.message);
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        toast.error(data.message || "Something went wrong");
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error("Something went wrong");
+    }
+  };
+
   const handleChange = (e) => {
+    const { name, value } = e.target;
+    console.log("name", name, "value", value);
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Implement form submission logic here
-    alert("Form submitted!");
-  };
 
   return (
     <>
@@ -85,16 +109,16 @@ const Contact = () => {
                   </label>
                   <textarea
                     name="message"
+                    type="text"
                     value={formData.message}
-                    onChange={handleChange}
+                    onChange={handleChange} // Ensure this is connected
                     id="message"
                     placeholder="Your Message"
                     rows="6"
-                    className="w-full p-3 border border-gray-300 rounded-md"
+                    className="w-full p-3 border border-gray-300 rounded-md text-black"
                     required
                   />
                 </div>
-
                 <div className="flex justify-center">
                   <button
                     type="submit"

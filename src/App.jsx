@@ -8,6 +8,8 @@ import Login from './pages/Login'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import Signup from './pages/Signup'
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
  
 
@@ -23,6 +25,7 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<Signup/>}/>
       </Routes>
+      <ToastContainer position='top-center'/>
     </>
   )
 }

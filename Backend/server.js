@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 const express = require("express");
 const dotenv = require("dotenv");
-// const userRoutes = require("./routes/UserRoutes");
+const Userroutes = require("./routes/Userroutes");
 const cors = require("cors");
-// const MessageRouter=require("./routes/MessageRouter");
+const MessageRouter=require("./routes/MessageRouter");
 const dbconection = require("./database/dbconnection");
 const bodyparser=require("body-parser");
 const app = express();
@@ -29,8 +29,8 @@ app.use(bodyparser.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-// app.use("/api/v1/user", userRoutes);
-// app.use("/api/v1/message",MessageRouter);
+app.use("/api/v1/user", Userroutes);
+app.use("/api/v1/message",MessageRouter);
 
 app.listen(PORT, (req, res) => {
     console.log(`Server is running at PORT: ${PORT}`);

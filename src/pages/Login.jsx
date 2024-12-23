@@ -1,15 +1,39 @@
 import Footer from '../components/Footer';
-import React, { useState } from 'react';
-
+import { useState } from 'react';
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log({ email, password });
-    // Add your login logic here
+    console.log('Form submitted', email, password);
+    try {
+      const res = await axios.post(
+        "http://localhost:5000/api/v1/user/login",
+        { email, password, role: 'User' },
+        {
+          withCredentials: true,
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+      console.log(res.data.message);
+      toast.success(res.data.message);
+      setEmail('');
+      setPassword('');
+      navigate('/');
+      localStorage.setItem('token',res.data.token);
+      localStorage.setItem('role',res.data.role);
+    } catch (error) {
+      toast.error(error.response?.data?.message || 'Something went wrong!');
+    }
   };
+
 
   return (
     <>

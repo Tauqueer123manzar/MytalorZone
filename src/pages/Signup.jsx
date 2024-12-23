@@ -1,7 +1,46 @@
 import Footer from '../components/Footer';
-import React from 'react';
-
+import { toast } from 'react-toastify';
+import axios from 'axios';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 const Signup = () => {
+  const[name,setName]=useState("");
+  const[email,setEmail]=useState("");
+  const[password,setPassword]=useState("");
+
+  const navigate=useNavigate();
+  
+  const handleSubmit=async(e)=>{
+    e.preventDefault();
+    console.log('Form submitted',name,email,password);
+   try {
+    await axios.post("http://localhost:5000/api/v1/user/register",{
+      name,
+      email,
+      password,
+      role:"User"
+    },
+  {
+    withcredentials:true,
+    method:"POST",
+    headers:{
+       "Content-Type":"application/json"
+    },
+    body:JSON.stringify({
+      name,email,password
+    })
+  }).then((res)=>{
+    console.log(res.data.message);
+    toast.success(res.data.message);
+    navigate("/login");
+    setName("");
+    setEmail("");
+    setPassword("");
+  })
+   } catch (error) {
+    toast.error(error.response.data.message);
+   }
+  };
   return (
     <>
       <div className="flex flex-col md:flex-row min-h-screen bg-gray-100">
@@ -31,7 +70,7 @@ const Signup = () => {
         <div className="flex flex-col items-center justify-center w-full md:w-1/2 p-6 bg-white">
           <div className="w-full max-w-md">
             <h2 className="text-3xl font-bold text-gray-800 text-center">Create Account</h2>
-            <form className="mt-6">
+            <form className="mt-6" onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label htmlFor="fullName" className="block text-sm font-medium text-gray-600">
                   Full Name
@@ -39,6 +78,8 @@ const Signup = () => {
                 <input
                   id="fullName"
                   type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   className="w-full px-4 py-2 mt-1 text-gray-700 bg-gray-50 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                   placeholder="Enter your full name"
                 />
@@ -50,6 +91,8 @@ const Signup = () => {
                 <input
                   id="email"
                   type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="w-full px-4 py-2 mt-1 text-gray-700 bg-gray-50 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                   placeholder="Enter your email"
                 />
@@ -62,6 +105,8 @@ const Signup = () => {
                   <input
                     id="password"
                     type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     className="w-full px-4 py-2 mt-1 text-gray-700 bg-gray-50 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                     placeholder="Enter your password"
                   />
