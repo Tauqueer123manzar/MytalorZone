@@ -49,7 +49,7 @@ const products2 = [
   {
     id: 1,
     image: "https://4.bp.blogspot.com/-Ku3eG1zKhps/VP1CrMfUVJI/AAAAAAAAA1c/rc_D_iJ5vUs/s1600/1806.jpg",
-    title: "Mens Kurta Set with Trousers and Shoes",  
+    title: "Mens Kurta Set with Trousers and Shoes",
     price: 2199,
     reviews: 29,
     rating: 4.5,
@@ -97,23 +97,26 @@ const Home = () => {
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative text-center text-white">
-          <h1 className="text-5xl font-bold drop-shadow-lg">Welcome to MytailorZone</h1>
+          <h1 className="text-5xl font-bold drop-shadow-lg">
+            <span className="typewriter">Welcome to MytailorZone</span>
+          </h1>
+
           <p className="text-lg mt-4 max-w-xl mx-auto drop-shadow-md">
             Explore the best shopping experience tailored just for you.
           </p>
-         <div className="flex justify-center gap-4">
-         <button className="mt-8 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-lg transition-all">
-          <a href="/sevices">Start Shopping</a>
-          </button>
-          
-          <button className="mt-8 px-6 py-3 gap-2 bg-orange-500 hover:bg-orange-600 text-white text-lg font-semibold rounded-lg shadow-lg transition-all"
-          ><a href="/signup">Create Account</a>  
-          </button>
-         </div>
+          <div className="flex justify-center gap-4">
+            <button className="mt-8 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-lg transition-all">
+              <a href="/sevices">Start Shopping</a>
+            </button>
+
+            <button className="mt-8 px-6 py-3 gap-2 bg-orange-500 hover:bg-orange-600 text-white text-lg font-semibold rounded-lg shadow-lg transition-all"
+            ><a href="/signup">Create Account</a>
+            </button>
+          </div>
         </div>
       </div>
 
-  {/* ============================================ Shop Women Section ============================================ */}
+      {/* ============================================ Shop Women Section ============================================ */}
       <div className="mt-10 px-4">
         <h1 className="text-4xl font-bold text-center font-[poppins] mb-8">Shop Women</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">

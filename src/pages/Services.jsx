@@ -42,7 +42,7 @@ const Services = () => {
             </div>
 
             <div>
-              <label className="block font-semibold mb-2">Max Price (Rs)</label>
+              <label className="inline-block font-semibold mb-2">Max Price (Rs)</label>
               <input
                 type="range"
                 min="50"
