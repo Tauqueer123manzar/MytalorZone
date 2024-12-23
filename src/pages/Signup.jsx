@@ -14,7 +14,7 @@ const Signup = () => {
     e.preventDefault();
     console.log('Form submitted',name,email,password);
    try {
-    await axios.post("http://localhost:5000/api/v1/user/register",{
+    await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/user/register`,{
       name,
       email,
       password,
