@@ -106,7 +106,7 @@ const Home = () => {
           </p>
           <div className="flex justify-center gap-4">
             <button className="mt-8 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-lg transition-all">
-              <a href="/sevices">Start Shopping</a>
+              <a href="/services">Start Shopping</a>
             </button>
 
             <button className="mt-8 px-6 py-3 gap-2 bg-orange-500 hover:bg-orange-600 text-white text-lg font-semibold rounded-lg shadow-lg transition-all"
