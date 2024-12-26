@@ -124,6 +124,10 @@ const Home = () => {
             <div
               key={product.id}
               className="group relative product-card overflow-hidden rounded-lg shadow-md bg-white hover:scale-105 hover:shadow-lg transition-transform duration-300"
+              data-aos="zoom-in"
+              data-aos-easing="ease-in-out"
+              data-aos-duration="2000"
+              data-aos-offset="200"
             >
               <img
                 src={product.image}
@@ -164,6 +168,10 @@ const Home = () => {
             <div
               key={product.id}
               className="group relative product-card overflow-hidden rounded-lg shadow-md bg-white hover:scale-105 hover:shadow-lg transition-transform duration-300"
+              data-aos="zoom-in"
+              data-aos-easing="ease-in-out"
+              data-aos-duration="2000"
+              data-aos-offset="200"
             >
               <img
                 src={product.image}
