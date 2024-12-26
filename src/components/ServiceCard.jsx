@@ -8,6 +8,13 @@ const ServiceCard = ({ service }) => {
                 alt={service.name}
                 className="w-full object-cover rounded-t-lg"
                 style={{ height: "450px" }}
+                data-aos="zoom-in"
+                data-aos-delay="50"
+                data-aos-easing="ease-in-out"
+                data-aos-duration="2000"
+                data-aos-offset="200"
+                data-aos-once="true"
+               
             />
             <div className="mt-4">
                 <h3 className="text-lg font-semibold">{service.name}</h3>
